@@ -1,6 +1,21 @@
 import string
 import math
 
+
+def main():
+    user_input = input("Hello please enter a word or sentence: \n")
+    print("You inputted: \"{}\"".format(user_input))
+    print("There are", get_num_of_characters(user_input), "characters in the text you inputted")
+    print("This is your input without spaces or tabs:", output_without_whitespace(user_input))
+
+    phrase = input("\nEnter a new phrase: \n")
+    print("This is your new phrase as an acronym:", get_acronym(phrase))
+
+    print("\nNow let us do some encryptions")
+    message = input("Please input the word or sentence you would like to be encrypted: \n")
+    key = input("Please input what you would like your key to be: \n")
+    print("This is your encrypted phrase: ", get_safe(message, key))
+
 def get_num_of_characters(characters):
     amount = 0
     for num in characters:
@@ -36,7 +51,6 @@ def get_acronym(characters):
 
 def get_safe(message, key):
     letters = string.ascii_letters
-    print(letters)
     encrypted_message = ""
     next_index = 0
     for char in message:
@@ -44,9 +58,6 @@ def get_safe(message, key):
             char_index = letters.find(char)
             char_index_copy = char_index
 
-            #if char_index >= 26:
-                #sub_index = (5 * (char_index//26) + 17) % len(key)
-            #else:
             sub_index = (5 * char_index + 17) % len(key)
 
             while sub_index >= len(key):
