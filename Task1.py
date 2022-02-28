@@ -1,8 +1,10 @@
+import string
+import math
 
 def get_num_of_characters(characters):
     amount = 0
     for num in characters:
-        amount +=1
+        amount += 1
     return amount
 
 
@@ -32,6 +34,31 @@ def get_acronym(characters):
     return "".join(acronym).upper()
 
 
-#def get_safe(sentence, key):
+def get_safe(message, key):
+    letters = string.ascii_letters
+    print(letters)
+    encrypted_message = ""
+    next_index = 0
+    for char in message:
+        if char in letters:
+            char_index = letters.find(char)
+            char_index_copy = char_index
+
+            #if char_index >= 26:
+                #sub_index = (5 * (char_index//26) + 17) % len(key)
+            #else:
+            sub_index = (5 * char_index + 17) % len(key)
+
+            while sub_index >= len(key):
+                sub_index % len(key)
+
+            if char_index_copy >= len(key):
+                encrypted_message += letters[sub_index*2]
+            else:
+                encrypted_message += letters[sub_index]
+            next_index += 1
+
+    return encrypted_message
+
 
 

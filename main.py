@@ -7,3 +7,8 @@ if __name__ == '__main__':
     print("This is your input without spaces or tabs:", output_without_whitespace(user_input))
     print("This is your input as an acronym:", get_acronym(user_input))
 
+    print("\n Now let us do some encryptions")
+    phrase = input("Please input the word or sentence you would like to be encrypted: \n")
+    key = input("Please input what you would like your key to be: \n")
+    print("This is your encrypted phrase: ", get_safe(phrase, key))
+
