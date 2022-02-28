@@ -19,7 +19,6 @@ if __name__ == '__main__':
 
 
 
-
 '''
 C:\Users\shere\OneDrive\Documents\CPP\SP2022\CS2520\project2\functions\venv\Scripts\python.exe C:/Users/shere/OneDrive/Documents/CPP/SP2022/CS2520/project2/functions/main.py
 Number of test runs you'd like to do: 3
@@ -40,44 +39,43 @@ Please input the word or sentence you would like to be encrypted:
 RAM
 Please input what you would like your key to be: 
 bpzhgocvjdqswkimlutneryaxf
-This is your encrypted phrase:  WIY
+This is your encrypted phrase:  UBW
 
 
 Hello please enter a word or sentence: 
-are you feeling it now mr.krabs
-You inputted: "are you feeling it now mr.krabs"
-There are 31 characters in the text you inputted
-This is your input without spaces or tabs: areyoufeelingitnowmr.krabs
+lifes a garden, dig it
+You inputted: "lifes a garden, dig it"
+There are 22 characters in the text you inputted
+This is your input without spaces or tabs: lifesagarden,digit
 
 Enter a new phrase: 
-live and let die
-This is your new phrase as an acronym: LALD
+life's a garden, dig it
+This is your new phrase as an acronym: LAGDI
 
 Now let us do some encryptions
 Please input the word or sentence you would like to be encrypted: 
-noice
+run
 Please input what you would like your key to be: 
 bpzhgocvjdqswkimlutneryaxf
-This is your encrypted phrase:  ejfbl
+This is your encrypted phrase:  uek
 
 
 Hello please enter a word or sentence: 
-a			lj		ij   kjk kjk kjll
-You inputted: "a			lj		ij   kjk kjk kjll"
-There are 25 characters in the text you inputted
-This is your input without spaces or tabs: aljijkjkkjkkjll
+aa			kj		kj      ds
+You inputted: "aa			kj		kj      ds"
+There are 19 characters in the text you inputted
+This is your input without spaces or tabs: aakjkjds
 
 Enter a new phrase: 
-i'm loving it
-This is your new phrase as an acronym: ILI
+peace love unity respect
+This is your new phrase as an acronym: PLUR
 
 Now let us do some encryptions
 Please input the word or sentence you would like to be encrypted: 
-McLovin
+PLUR
 Please input what you would like your key to be: 
 bpzhgocvjdqswkimlutneryaxf
-This is your encrypted phrase:  YbOjsfe
+This is your encrypted phrase:  MSEU
 
 Process finished with exit code 0
-
 '''

@@ -45,25 +45,22 @@ def get_acronym(characters):
 # function to encrypt messages
 def get_safe(message, key):
     # gets lower and upper case alphabet letter into a string
-    letters = string.ascii_letters  # 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
-    # initializing some variables
+    lower_case = string.ascii_lowercase  # 'abcdefghijklmnopqrstuvwxyz'
+    upper_case = string.ascii_uppercase  # 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    # initializing variable
     encrypted_message = ""
 
     # iterates through every character in message
     for char in message:
-        if char in letters:  # checks if character is in the letters list
-            char_index = letters.find(char)  # gets index of alphabet that matches the character
-            # beginning of encryption by assigning a new index to the character in the message
-            sub_index = (5 * char_index + 17) % len(key)
-            # continues modulus encryption if sub_index is above the length of the coding key
-            while sub_index >= len(key):
-                sub_index % len(key)
-            # if the character was uppercase, the sub_index for the encryption will be multiplied by 2
-            if char_index >= len(key):
-                encrypted_message += letters[sub_index * 2]
-            else:
-                encrypted_message += letters[sub_index]
+        if char in lower_case:  # checks if character is in the letters list
+            char_index = lower_case.find(char)  # gets index of alphabet that matches the character
+            encrypted_message += key[char_index]    # assigns key element in place of the alphabet into new message
+        elif char in upper_case:
+            char_index = upper_case.find(char)  # gets index of alphabet that matches the character
+            # assigns key element in place of the alphabet into new message but in uppercase
+            encrypted_message += key[char_index].upper()
+        else:
+            encrypted_message += char   # if not a letter then char stays the same in the encrypted message
 
     return encrypted_message
 
